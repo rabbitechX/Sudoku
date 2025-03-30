@@ -26,7 +26,7 @@ public class Main {
             printBoard(board);
         }
         else {
-            System.out.println("Unsolvable board :(");
+            System.out.println("\nUnsolvable board :(");
         }
     }
 
