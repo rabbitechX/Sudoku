@@ -18,17 +18,16 @@ public class Main {
                 {0, 0, 7, 0, 4, 0, 2, 0, 3}
         };
 
+        System.out.println("\nSudoku\nInitial board:");
         printBoard(board);
 
         if (solveBoard(board)) {
-            System.out.println("Solved successfully");
+            System.out.println("\nSolved successfully!!!");
+            printBoard(board);
         }
         else {
             System.out.println("Unsolvable board :(");
         }
-
-        printBoard(board);
-
     }
 
     private static void printBoard(int[][] board) {
