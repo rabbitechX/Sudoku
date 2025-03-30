@@ -3,10 +3,17 @@ package org.rabbitechX;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello and welcome!");
+        int[][] board = {
+                {7, 0, 2, 0, 5, 0, 6, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0},
+                {0, 0, 0, 0, 0, 0, 0, 0, 0}
+        };
 
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("i = " + i);
-        }
     }
 }
