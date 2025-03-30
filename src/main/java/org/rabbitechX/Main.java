@@ -3,6 +3,7 @@ package org.rabbitechX;
 public class Main {
 
     private static final int GRID_SIZE = 9;
+    private static final int EMPTY = 0;
 
     public static void main(String[] args) {
 
@@ -33,13 +34,13 @@ public class Main {
     private static void printBoard(int[][] board) {
         for (int row = 0; row < GRID_SIZE; row++) {
             if (row % 3 == 0 && row != 0) {
-                System.out.println("------------");
+                System.out.println("------+------+------");
             }
             for (int column = 0; column < GRID_SIZE; column++) {
                 if (column % 3 == 0 && column != 0) {
-                    System.out.print("|");
+                    System.out.print("| ");
                 }
-                System.out.print(board[row][column]);
+                System.out.print(board[row][column] == EMPTY ? ". " : board[row][column] + " ");
             }
             System.out.println();
         }
@@ -86,7 +87,7 @@ public class Main {
     private static boolean solveBoard(int[][] board) {
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int column = 0; column < GRID_SIZE; column++) {
-                if (board[row][column] == 0) {
+                if (board[row][column] == EMPTY) {
                     for (int numberToTry = 1; numberToTry <= GRID_SIZE; numberToTry++) {
                         if (isValidPlacement(board, numberToTry, row, column)) {
                             board[row][column] = numberToTry;
@@ -95,7 +96,7 @@ public class Main {
                                 return true;
                             }
                             else {
-                                board[row][column] = 0;
+                                board[row][column] = EMPTY;
                             }
                         }
                     }
